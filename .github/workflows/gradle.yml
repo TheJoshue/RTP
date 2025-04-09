@@ -14,8 +14,6 @@ jobs:
           java-version: 21
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
-      - name: Publish with Gradle
-        run: ./gradlew build publish -PgahvilaUsername=${{ secrets.MAVEN_NAME }} -PgahvilaPassword=${{ secrets.MAVEN_SECRET }}
       - name: Archive JAR artifact
         uses: actions/upload-artifact@v4  # Updated to latest version
         with:
